@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#f4f1e8">
+<title>Poetycki rajd — Adam Mickiewicz</title>
+<style>
+:root{--ink:#183342;--muted:#597078;--paper:#fffdf7;--line:#dce2da;--gold:#e8b95e;--red:#c76050;--green:#467c65;--shadow:0 18px 46px #142d371f}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#f6f3ea,#e9efe8);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;justify-content:center;padding:24px 14px 34px}.shell{width:min(100%,620px)}header{text-align:center;margin:3px 0 18px}header .eyebrow{font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:#74857d}h1{font-family:Georgia,serif;font-size:clamp(32px,7vw,46px);letter-spacing:-.035em;margin:7px 0 5px;color:#173746}header p{font-size:14px;font-weight:550;line-height:1.5;color:var(--muted);margin:0 auto;max-width:460px}.hud{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 15px;margin-bottom:9px;background:#ffffffd9;border:1px solid var(--line);border-radius:13px;box-shadow:0 5px 14px #1737460b;font-size:13px;font-weight:750}.hud span{color:#a87317;font-size:17px}.room-status{display:none;margin:0 0 9px;padding:9px 13px;border:1px solid #cbd9d0;border-radius:11px;background:#f6fbf5;color:#365b4b;font-size:12px;font-weight:650}.room-status.visible{display:block}.room-status b{color:#183c2d}.gamebox{position:relative;border:1px solid #d5c49c;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#294147;touch-action:none}.gamebox canvas{display:block;width:100%;height:auto}.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#102b38b8;padding:18px;text-align:left;overflow:auto}.overlay.hidden{display:none}.card{width:min(100%,410px);max-height:100%;overflow:auto;padding:23px 23px 20px;border:1px solid #ffffffc9;border-radius:18px;background:var(--paper);box-shadow:0 18px 46px #071d2a55}.card h2{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:25px;font-weight:800;letter-spacing:-.035em;margin:4px 0 8px;color:#193949}.card p{font-size:13px;line-height:1.55;font-weight:500;color:#566d72;margin:5px 0 14px}.menu-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:15px 0}.solo-actions{grid-template-columns:1fr}.button{width:100%;border:0;border-radius:10px;padding:12px 15px;background:#1d4652;color:white;font:750 14px system-ui,sans-serif;cursor:pointer;transition:transform .14s,background .14s}.button:hover{background:#285e69;transform:translateY(-1px)}.button.secondary{background:#f4f1e8;color:#294650;border:1px solid #d9dfd9}.button.secondary:hover{background:#e8eee9}.button.gold{background:#e6b85f;color:#263b3e}.button.gold:hover{background:#f0c975}.button:disabled{opacity:.48;cursor:default;transform:none}.guide{margin-top:14px;padding-top:12px;border-top:1px solid #e4e8e2}.guide summary{cursor:pointer;list-style:none;font-size:13px;font-weight:800;color:#2e5558}.guide summary::-webkit-details-marker{display:none}.guide summary:after{content:'＋';float:right;color:#6e8a7d}.guide[open] summary:after{content:'−'}.guide ol{padding-left:20px;margin:10px 0;color:#4e656a;font-size:12px;line-height:1.55}.guide li{padding:2px 0}.film{margin:10px 0 4px;padding:8px;border-radius:12px;background:#183746;overflow:hidden}.film canvas{display:block;width:100%;height:auto;border-radius:7px;background:#294147}.film-label{font-size:10px;font-weight:750;color:#71837e;letter-spacing:.04em}.film-caption{display:block;width:100%;height:auto;margin-top:3px}.film-overlay{font-size:12px;font-weight:800;fill:#fff4d9;paint-order:stroke;stroke:#183746;stroke-width:4px;stroke-linejoin:round;animation:filmHint 12s infinite}.film.paused .film-overlay{animation-play-state:paused!important}@keyframes filmHint{0%,5%{opacity:0}10%,29%{opacity:1}34%,65%{opacity:0}70%,90%{opacity:1}100%{opacity:0}}.film-control{margin-top:7px;padding:6px 10px;border:1px solid #ffffff55;border-radius:7px;background:#ffffff1a;color:#fff;font:700 11px system-ui,sans-serif;cursor:pointer}.field{width:100%;padding:11px 12px;border:1px solid #d4ddd7;border-radius:9px;background:white;color:#183342;font:600 14px system-ui,sans-serif;outline:none;margin:5px 0 9px}.field:focus{border-color:#598678;box-shadow:0 0 0 3px #59867820}.room-code{font:850 30px ui-monospace,Consolas,monospace;letter-spacing:.19em;color:#203f4c;text-align:center;padding:10px;background:#f2f5ef;border:1px dashed #a9bbb1;border-radius:12px;margin:10px 0}.room-meta{font-size:12px;font-weight:650;color:#60777a;margin:8px 0 12px}.player-list{display:grid;gap:6px;max-height:132px;overflow:auto;margin:8px 0 14px}.player-row{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:8px;background:#f1f4ef;font-size:12px;font-weight:700}.player-row small{font-size:11px;color:#627a7b;font-weight:600}.room-note{min-height:20px;font-size:12px;color:#9a573c;font-weight:650;margin:3px 0 8px}.back{display:block;margin:10px auto 0;background:none;border:0;color:#658078;font:700 12px system-ui,sans-serif;cursor:pointer}.mobile{display:none;justify-content:center;gap:16px;margin:12px auto 0}.mobile button{width:70px;height:54px;border:1px solid #cbd6ce;border-radius:13px;background:#ffffffd9;color:#24404a;font-size:23px;touch-action:manipulation;box-shadow:0 4px 10px #17374610}.mobile button:active{background:#f2e0b7}.hint{text-align:center;margin:10px 0;color:#597078;font:650 12px/1.5 system-ui,sans-serif}footer{text-align:center;margin-top:14px;color:#72827f;font:600 11px/1.5 system-ui,sans-serif}footer strong{color:#526b5d}@media(max-width:650px),(pointer:coarse){.mobile{display:flex}.hint{margin-top:8px}.card{padding:20px 18px}.menu-actions{grid-template-columns:1fr}.overlay{align-items:flex-start;padding-top:12px;padding-bottom:12px}}
+</style>
+</head>
+<body><main class="shell">
+
+<div class="hud"><div>✦ Punkty: <span id="score">0</span></div><div>❤ Życia: <span id="lives">5</span></div><div>☄ Tempo: <span id="level">1</span></div></div>
+
+<div class="gamebox"><canvas id="game" width="480" height="640" aria-label="Gra Poetycki rajd"></canvas>
+<div class="overlay" id="overlay"><div class="card">
+<section id="mainMenu"><div class="menu-actions solo-actions"><button class="button gold" id="soloButton">Graj solo</button></div>
+<details class="guide"><summary>Jak grać? • poradnik tekstowy i filmik</summary><ol><li>Przesuń auto w lewo lub w prawo klawiszami ← →, A/D albo przyciskami na ekranie.</li><li>Zbierz utwór Adama Mickiewicza: najedź autem na chmurkę z jego tytułem, aby zdobyć punkt.</li><li>Omijaj utwory innych autorów. Zderzenie z nimi albo minięcie utworu Mickiewicza odbiera serce.</li><li>Masz 5 serc. Zdobądź 20 punktów, żeby wygrać. Każdy zebrany utwór Mickiewicza trwale zwiększa tempo.</li></ol><div class="film" id="tutorialFilm"><canvas id="tutorialCanvas" width="360" height="480" aria-label="Rozgrywka Poetyckiego rajdu: zbieranie utworów Mickiewicza, omijanie innych i tracenie serc"></canvas><svg viewBox="0 0 360 36" class="film-caption" aria-hidden="true"><text class="film-overlay" x="180" y="24" text-anchor="middle">Zbierz utwór Adama Mickiewicza!</text></svg><button type="button" class="film-control" id="tutorialToggle">Pauzuj filmik</button></div><div class="film-label">Fragment rozgrywki z autem, drogą i zasadami z gry</div></details></section>
+<section id="resultScreen" hidden><h2 id="resultTitle">Koniec rajdu</h2><p id="resultMessage"></p><button class="button gold" id="replayButton">Zagraj ponownie</button><button class="back" id="menuButton">Wróć do menu</button></section>
+</div></div></div>
+<div class="mobile"><button id="left" aria-label="W lewo">◀</button><button id="right" aria-label="W prawo">▶</button></div>
+</main>
+<script>
+(()=>{if(!CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){r=Math.min(r,w/2,h/2);this.beginPath();this.moveTo(x+r,y);this.arcTo(x+w,y,x+w,y+h,r);this.arcTo(x+w,y+h,x,y+h,r);this.arcTo(x,y+h,x,y,r);this.arcTo(x,y,x+w,y,r);this.closePath();return this}}
+const c=document.getElementById('game');let ctx=c.getContext('2d');const overlay=document.getElementById('overlay'),scoreEl=document.getElementById('score'),livesEl=document.getElementById('lives'),levelEl=document.getElementById('level');const W=c.width,H=c.height,lanes=[120,240,360];
+const own=['Pan Tadeusz','Dziady cz. II','Ballady i romanse','Sonety krymskie','Konrad Wallenrod','Grażyna','Reduta Ordona','Świtezianka','Ajudah','Liryki lozańskie','Konfederaci Barscy','Pielgrzym'];
+const other=['Lalka','Quo vadis','Zemsta','Faraon','Chłopi','Przedwiośnie','Kordian','Krzyżacy','Oda do wolności','Promethidion','Pojata','Anafielas','Balladyna','Wesele','Latarnik','Syzyfowe prace','Granica'];
+let player={lane:1,x:lanes[1],y:520},items=[],score=0,lives=5,frame=0,speed=2.8,running=false,last=0,roadOffset=0,flash=0,ownDeck=[],otherDeck=[],randState=1;
+const $=id=>document.getElementById(id);function rnd(){randState=(randState*1664525+1013904223)>>>0;return randState/4294967296}
+function drawRoad(){let g=ctx.createLinearGradient(0,0,W,0);g.addColorStop(0,'#193d37');g.addColorStop(.12,'#315247');g.addColorStop(.5,'#3d4a4d');g.addColorStop(.88,'#315247');g.addColorStop(1,'#193d37');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);ctx.fillStyle='#bd9b61';ctx.fillRect(28,0,4,H);ctx.fillRect(450,0,4,H);let a=ctx.createLinearGradient(30,0,450,0);a.addColorStop(0,'#3d474a');a.addColorStop(.5,'#596064');a.addColorStop(1,'#3d474a');ctx.fillStyle=a;ctx.fillRect(32,0,418,H);for(const x of [172,308])for(let y=-58+(roadOffset%88);y<H;y+=88){ctx.fillStyle='#f1e8d2b8';ctx.beginPath();ctx.roundRect(x-2,y,4,43,2);ctx.fill()}for(let y=-15+(roadOffset%68);y<H;y+=68)for(const side of [14,W-14]){ctx.fillStyle='#172d26';ctx.beginPath();ctx.ellipse(side,y+9,13,16,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#55734d';ctx.beginPath();ctx.ellipse(side-2,y+5,10,13,0,0,Math.PI*2);ctx.fill()}ctx.fillStyle='#d8c28f';ctx.fillRect(32,H-7,418,7)}
+function drawCar(x,y){
+  ctx.save();
+  ctx.translate(x,y);
+  ctx.fillStyle='#07131866';
+  ctx.beginPath();
+  ctx.ellipse(0,39,30,46,0,0,Math.PI*2);
+  ctx.fill();
+  ctx.fillStyle='#172124';
+  for(const wy of [3,53]){
+    ctx.beginPath();
+    ctx.roundRect(-31,wy,8,19,2);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.roundRect(23,wy,8,19,2);
+    ctx.fill();
+  }
+  const body=ctx.createLinearGradient(-26,0,26,0);
+  body.addColorStop(0,'#a43e35');
+  body.addColorStop(.5,'#e56b50');
+  body.addColorStop(1,'#a43e35');
+  ctx.fillStyle=body;
+  ctx.beginPath();
+  ctx.roundRect(-26,-8,52,84,8);
+  ctx.fill();
+  ctx.fillStyle='#466d78';
+  ctx.beginPath();
+  ctx.roundRect(-17,7,34,22,3);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.roundRect(-14,48,28,13,3);
+  ctx.fill();
+  ctx.fillStyle='#ffe5a8';
+  ctx.fillRect(-19,-5,8,4);
+  ctx.fillRect(11,-5,8,4);
+  ctx.fillStyle='#d97867';
+  ctx.fillRect(-18,69,7,3);
+  ctx.fillRect(11,69,7,3);
+  ctx.restore();
+}function block(b){ctx.save();ctx.translate(b.x,b.y);ctx.rotate(b.tilt);ctx.shadowColor='#08172266';ctx.shadowBlur=10;ctx.shadowOffsetY=5;ctx.beginPath();ctx.moveTo(-52,20);ctx.lineTo(-52,3);ctx.bezierCurveTo(-65,-2,-60,-19,-46,-20);ctx.bezierCurveTo(-44,-35,-25,-38,-16,-26);ctx.bezierCurveTo(-7,-43,15,-39,19,-23);ctx.bezierCurveTo(34,-31,47,-20,44,-10);ctx.bezierCurveTo(61,-7,62,12,49,17);ctx.lineTo(49,22);ctx.quadraticCurveTo(0,30,-52,20);ctx.closePath();ctx.fillStyle='#fff';ctx.fill();ctx.shadowBlur=0;ctx.shadowOffsetY=0;ctx.strokeStyle='#c8d9df';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#173142';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='800 '+(b.name.length>15?10:b.name.length>11?12:14)+'px Georgia';ctx.fillText(b.name,0,1,94);ctx.restore()}
+function drawLives(){ctx.save();ctx.fillStyle='#071a24cc';ctx.beginPath();ctx.roundRect(10,10,158,40,12);ctx.fill();for(let i=0;i<5;i++){let x=27+i*28,y=30;ctx.save();ctx.translate(x,y);ctx.scale(.68,.68);ctx.beginPath();ctx.moveTo(0,11);ctx.bezierCurveTo(-5,6,-15,0,-15,-7);ctx.bezierCurveTo(-15,-17,-2,-18,0,-8);ctx.bezierCurveTo(3,-18,15,-17,15,-7);ctx.bezierCurveTo(15,0,5,7,0,11);ctx.closePath();ctx.fillStyle=i<lives?'#f06b68':'#53616a';ctx.fill();ctx.restore()}ctx.restore()}
+function draw(){drawRoad();drawLives();items.forEach(block);drawCar(player.x,player.y);if(flash>0){ctx.fillStyle=flash%2?'#ffffff35':'#ff644433';ctx.fillRect(0,0,W,H);flash--}}
+function shuffle(list){let a=[...list];for(let i=a.length-1;i>0;i--){let j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function drawTitle(isOwn){let deck=isOwn?ownDeck:otherDeck;if(deck.length===0){deck=shuffle(isOwn?own:other);if(isOwn)ownDeck=deck;else otherDeck=deck}return deck.pop()}
+function addItem(){let ownBook=rnd()<.47,lane=Math.floor(rnd()*3);items.push({lane,x:lanes[lane],y:-42,name:drawTitle(ownBook),own:ownBook,tilt:(rnd()-.5)*.04})}
+function showSection(id){for(const x of ['mainMenu','resultScreen'])$(x).hidden=x!==id;overlay.classList.remove('hidden')}
+function startGame(){items=[];ownDeck=[];otherDeck=[];score=0;lives=5;frame=0;speed=2.8;player.lane=1;player.x=lanes[1];randState=((Date.now()^Math.floor(Math.random()*0xffffffff))>>>0)||1;scoreEl.textContent='0';livesEl.textContent='5';levelEl.textContent='1.0×';overlay.classList.add('hidden');running=true;last=performance.now();requestAnimationFrame(loop)}
+function end(win){running=false;$('resultTitle').textContent=win?'Wspaniały rajd!':'Koniec rajdu';$('resultMessage').textContent=win?`Zdobyto 20 punktów — gratulacje!`:`Koniec gry. Wynik: ${score} pkt.`;$('replayButton').textContent='Zagraj ponownie';$('replayButton').disabled=false;showSection('resultScreen')}function update(dt){frame+=dt;player.x+=(lanes[player.lane]-player.x)*Math.min(1,.2*dt);roadOffset+=speed*dt;if(frame>Math.max(40,90-score*.35)){addItem();frame=0}for(let i=items.length-1;i>=0;i--){let b=items[i];b.y+=speed*dt;if(Math.abs(b.x-player.x)<45&&Math.abs(b.y-player.y)<57){if(b.own){score++;speed=Math.min(5.4,2.8+score*.22)}else{lives--;flash=8}items.splice(i,1);scoreEl.textContent=score;livesEl.textContent=lives;levelEl.textContent=(speed/2.8).toFixed(1)+'×';if(score>=20){end(true);return}if(lives<=0){end(false);return}}else if(b.y>player.y+62){if(b.own){lives--;flash=8;livesEl.textContent=lives;if(lives<=0){items.splice(i,1);end(false);return}}items.splice(i,1)}}}
+function loop(t){if(!running)return;let dt=Math.min((t-last)/16.67,1.5);last=t;update(dt);draw();if(running)requestAnimationFrame(loop)}
+function move(d){if(running)player.lane=Math.max(0,Math.min(2,player.lane+d))}
+$('soloButton').addEventListener('click',startGame);$('menuButton').addEventListener('click',()=>showSection('mainMenu'));$('replayButton').addEventListener('click',startGame);document.addEventListener('keydown',e=>{const t=e.target;if(t&&(t.isContentEditable||['INPUT','TEXTAREA','SELECT'].includes(t.tagName)))return;if(e.key==='ArrowLeft'||e.key==='ArrowRight')e.preventDefault();if(e.key==='ArrowLeft'||e.key.toLowerCase()==='a')move(-1);if(e.key==='ArrowRight'||e.key.toLowerCase()==='d')move(1)});document.getElementById('tutorialToggle').addEventListener('click',()=>{const film=document.getElementById('tutorialFilm'),paused=film.classList.toggle('paused');document.getElementById('tutorialToggle').textContent=paused?'Odtwórz filmik':'Pauzuj filmik';if(!paused)requestAnimationFrame(drawTutorialFrame)});
+const tutorialCanvas=$('tutorialCanvas'),tutorialCtx=tutorialCanvas.getContext('2d');let tutorialState={time:0,lane:1,x:lanes[1],items:[],score:0,lives:5,offset:0,flash:0,serial:0,fired:[]};
+function drawTutorialFrame(){if(!tutorialCanvas||$('tutorialFilm').classList.contains('paused'))return;const q=tutorialState;q.time+=1/60;const phase=q.time%15;const schedule=[{t:.5,lane:1,own:true,name:'Pan Tadeusz'},{t:4.4,lane:1,own:false,name:'Lalka'},{t:8.2,lane:2,own:true,name:'Świtezianka'},{t:11.7,lane:0,own:true,name:'Dziady cz. II'}];if(phase<1/60){q.items=[];q.lane=1;q.x=lanes[1];q.score=0;q.lives=5;q.serial=0;q.fired=[]}for(let j=0;j<schedule.length;j++){const spec=schedule[j];if(!q.fired[j]&&phase>=spec.t){q.fired[j]=true;q.items.push({lane:spec.lane,x:lanes[spec.lane],y:-42,name:spec.name,own:spec.own,tilt:0,serial:q.serial++})}}
+if(phase>3.25&&phase<4.3)q.lane=0;else if(phase>6.3&&phase<8.05)q.lane=1;else if(phase>10.0&&phase<11.65)q.lane=2;
+q.x+=(lanes[q.lane]-q.x)*.2;q.offset+=2.8;for(let i=q.items.length-1;i>=0;i--){const b=q.items[i];b.y+=2.8;if(Math.abs(b.x-q.x)<45&&Math.abs(b.y-520)<57){if(b.own)q.score++;else{q.lives--;q.flash=8}q.items.splice(i,1)}else if(b.y>582){if(b.own){q.lives--;q.flash=8}q.items.splice(i,1)}}
+const old={ctx,items,player,lives,roadOffset,flash};ctx=tutorialCtx;ctx.setTransform(.75,0,0,.75,0,0);items=q.items;player={x:q.x,y:520};lives=q.lives;roadOffset=q.offset;flash=q.flash;draw();q.flash=Math.max(0,q.flash-1);ctx=old.ctx;items=old.items;player=old.player;lives=old.lives;roadOffset=old.roadOffset;flash=old.flash;requestAnimationFrame(drawTutorialFrame)}
+requestAnimationFrame(drawTutorialFrame);$('left').addEventListener('pointerdown',()=>move(-1));$('right').addEventListener('pointerdown',()=>move(1));let sx=null;c.addEventListener('touchstart',e=>{sx=e.changedTouches[0].clientX},{passive:true});c.addEventListener('touchend',e=>{if(sx===null)return;let dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>25)move(dx<0?-1:1);sx=null},{passive:true});draw();})();
+</script></body></html>
+
+
+
+

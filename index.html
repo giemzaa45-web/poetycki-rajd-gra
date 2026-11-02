@@ -22,7 +22,7 @@
 <script>
 (()=>{if(!CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){r=Math.min(r,w/2,h/2);this.beginPath();this.moveTo(x+r,y);this.arcTo(x+w,y,x+w,y+h,r);this.arcTo(x+w,y+h,x,y+h,r);this.arcTo(x,y+h,x,y,r);this.arcTo(x,y,x+w,y,r);this.closePath();return this}}
 const c=document.getElementById('game');let ctx=c.getContext('2d');const overlay=document.getElementById('overlay'),scoreEl=document.getElementById('score'),livesEl=document.getElementById('lives'),levelEl=document.getElementById('level');const W=c.width,H=c.height,lanes=[120,240,360];
-const own=['Pan Tadeusz','Dziady cz. II','Ballady i romanse','Sonety krymskie','Konrad Wallenrod','Grażyna','Reduta Ordona','Świtezianka','Ajudah','Liryki lozańskie','Konfederaci Barscy','Pielgrzym','Pani Aniela','Do Matki Polki','Śmierć Pułkownika','Żeglarz','Snuć miłość...','Dudarz','Lilije'];
+const own=['Pan Tadeusz','Dziady cz. II','Ballady i romanse','Sonety krymskie','Konrad Wallenrod','Grażyna','Reduta Ordona','Świtezianka','Ajudah','Liryki lozańskie','Konfederaci Barscy','Pani Aniela','Do Matki Polki','Śmierć Pułkownika','Żeglarz','Snuć miłość...','Dudarz','Lilije'];
 const other=['Lalka','Quo vadis','Zemsta','Faraon','Chłopi','Przedwiośnie','Kordian','Krzyżacy','Oda do wolności','Promethidion','Pojata','Anafielas','Balladyna','Wesele','Latarnik','Syzyfowe prace','Granica'];
 let player={lane:1,x:lanes[1],y:520},items=[],score=0,lives=5,frame=0,speed=2.8,running=false,last=0,roadOffset=0,flash=0,ownDeck=[],otherDeck=[],randState=1;
 const $=id=>document.getElementById(id);function rnd(){randState=(randState*1664525+1013904223)>>>0;return randState/4294967296}
